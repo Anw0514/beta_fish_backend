@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fish: one
+  opponent: one
+  won: false
+
+two:
+  fish: two
+  opponent: two
+  won: false
