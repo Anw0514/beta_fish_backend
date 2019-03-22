@@ -5,7 +5,7 @@ class CreateFish < ActiveRecord::Migration[5.2]
       t.string :img_url
       t.integer :hp
       t.integer :power
-      t.integer :games_won
+      t.integer :games_won, default: 0
 
       t.timestamps
     end

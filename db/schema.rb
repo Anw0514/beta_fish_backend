@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2019_03_21_200609) do
     t.string "img_url"
     t.integer "hp"
     t.integer "power"
-    t.integer "games_won"
+    t.integer "games_won", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

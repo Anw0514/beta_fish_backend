@@ -3,6 +3,8 @@ class FishController < ApplicationController
 
     def create
         @fish = Fish.new(fish_params)
+        @fish.games_won = 0
+        @fish.getStats
         if @fish.save
             render json: @fish, status: accepted
         else
