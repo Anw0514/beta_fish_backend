@@ -7,9 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-Fight.destroy_all
-Fish.destroy_all
-Opponent.destroy_all
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :truncation
+DatabaseCleaner.clean
+
+# Fish.destroy_all
+# Opponent.destroy_all
+# Fight.destroy_all
 
 
 fishes = []
