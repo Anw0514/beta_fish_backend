@@ -21,7 +21,7 @@ fishes = []
 opponents = []
 
 for i in 0..9
-    fish = Fish.new(name: Faker::Creature::Dog.name, img_url: "../public/beta_images/fish#{i + 1}.png")
+    fish = Fish.new(name: Faker::Creature::Dog.name, img_url: "fish#{i + 1}")
     fish.getStats
     fish.save
     fishes << fish
@@ -29,7 +29,7 @@ for i in 0..9
     hp = 400 + (i * 100)
     power = 500 + (i * 100)
 
-    opponent = Opponent.create(name: "Level #{i + 1}", img_url: "../public/beta_images/fish#{i + 1}.png", hp: hp, power: power)
+    opponent = Opponent.create(name: "Level #{i + 1}", img_url: "fish#{i + 1}", hp: hp, power: power)
     opponents << opponent
 end
 
