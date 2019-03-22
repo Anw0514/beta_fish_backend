@@ -20,8 +20,8 @@ DatabaseCleaner.clean
 fishes = []
 opponents = []
 
-for i in 0..10
-    fish = Fish.new(name: Faker::Creature::Dog.name, img_url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{rand(1..150)}.png")
+for i in 0..9
+    fish = Fish.new(name: Faker::Creature::Dog.name, img_url: "../public/beta_images/fish#{i + 1}.png")
     fish.getStats
     fish.save
     fishes << fish
@@ -29,11 +29,14 @@ for i in 0..10
     hp = 400 + (i * 100)
     power = 500 + (i * 100)
 
-    opponent = Opponent.create(name: "Level #{i}", img_url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/#{rand(1..150)}.png", hp: hp, power: power)
+    opponent = Opponent.create(name: "Level #{i + 1}", img_url: "../public/beta_images/fish#{i + 1}.png", hp: hp, power: power)
     opponents << opponent
 end
 
 for i in 0..15
     bool = i%2 == 0
-    Fight.create(fish: fishes.sample, opponent: opponents.sample)
+    fight = Fight.new(fish: fishes.sample, opponent: opponents.sample)
+    fight.won = bool
+    fight.update_fish
+    fight.save
 end

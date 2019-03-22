@@ -1,6 +1,7 @@
 class FightsController < ApplicationController
     def create
         @fight = Fight.new(fight_params)
+        @fight.update_fish
         if @fight.save
             render json: @fight, status: accepted
         else
