@@ -6,9 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Fish.destroy_all
-Opponent.destroy_all
-Fight.destroy_all
+require 'database_cleaner'
+
+DatabaseCleaner.strategy = :truncation
+DatabaseCleaner.clean
+
+# Fish.destroy_all
+# Opponent.destroy_all
+# Fight.destroy_all
 
 plecko = Fish.create(name: 'Plecko', img_url: '', hp: 1500, power: 700, games_won: 1)
 Fish.create(name: 'Goldie', img_url: '', hp: 1000, power: 1100, games_won: 1)
