@@ -6,9 +6,9 @@ class FishController < ApplicationController
         @fish.games_won = 0
         @fish.getStats
         if @fish.save
-            render json: @fish, status: accepted
+            render json: @fish
         else
-            render json: {errors: @fish.errors.full_messages}, status: unprocessible_entity
+            render json: {errors: @fish.errors.full_messages}
         end
     end
 
