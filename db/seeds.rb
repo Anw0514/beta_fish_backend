@@ -30,10 +30,10 @@ for i in 0..9
     power = 500 + (i * 100)
 end
 
-    melanie = Opponent.create(name: "Melanie", img_url: "melanie", hp: 300, power: 100)
-    jake = Opponent.create(name: "Jake", img_url: "jake", hp: 500, power: 350)
-    paul = Opponent.create(name: "Melanie", img_url: "melanie", hp: 1500, power: 750)
-    ann = Opponent.create(name: "Melanie", img_url: "melanie", hp: 4500, power: 2000)
+    melanie = Opponent.create(name: "Melanie", img_url: "melanie", hp: 1000, power: 800)
+    jake = Opponent.create(name: "Jake", img_url: "jake", hp: 1500, power: 2000)
+    paul = Opponent.create(name: "Paul", img_url: "paul", hp: 3000, power: 3000)
+    ann = Opponent.create(name: "Ann", img_url: "ann", hp: 4500, power: 5000)
 
 
 
