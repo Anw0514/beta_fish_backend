@@ -31,7 +31,7 @@ class FishController < ApplicationController
     end
 
     def destroy
-        @fish.destroy
+      render json: @fish.destroy
     end
 
     private

@@ -1,5 +1,5 @@
 class Fish < ApplicationRecord
-    has_many :fights
+    has_many :fights, dependent: :destroy
     has_many :opponents, through: :fights
 
 
