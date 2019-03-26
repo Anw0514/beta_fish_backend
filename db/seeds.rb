@@ -28,10 +28,14 @@ for i in 0..9
 
     hp = 400 + (i * 100)
     power = 500 + (i * 100)
-
-    opponent = Opponent.create(name: "Level #{i + 1}", img_url: "fish#{i + 1}", hp: hp, power: power)
-    opponents << opponent
 end
+
+    melanie = Opponent.create(name: "Melanie", img_url: "melanie", hp: 300, power: 100)
+    jake = Opponent.create(name: "Jake", img_url: "jake", hp: 500, power: 350)
+    paul = Opponent.create(name: "Melanie", img_url: "melanie", hp: 1500, power: 750)
+    ann = Opponent.create(name: "Melanie", img_url: "melanie", hp: 4500, power: 2000)
+
+
 
 for i in 0..15
     bool = i%2 == 0
